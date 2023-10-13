@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
+    <!-- <script type="module" src="jsFile.js"></script> -->
+    <!-- <script src="./test.js"></script> -->
+    <title>QUIZ APP</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="q-count">
+          Question <strong q-number>1</strong> of <strong>20</strong>
+        </div>
+        <div class="timer">
+          <span class="minutes">00</span>:<span class="seconds">00</span>
+        </div>
+      </div>
+      <div class="q-body">
+        <div class="question"></div>
+        <div class="q-image"></div>
+        <div class="options">
+          <div class="choices">Lorem ipsum dolor sit amet.</div>
+          <!-- <div class="choices">Lorem ipsum dolor sit amet.</div>
+          <div class="choices">Lorem ipsum dolor sit amet.</div>
+          <div class="choices">Lorem ipsum dolor .</div> -->
+        </div>
+      </div>
+      <div class="q-submit">
+        <button id="prev-btn" class="progress-btn">Previous</button>
+        <button id="next-btn" class="progress-btn">Next</button>
+      </div>
+    </div>
+    <button class="start">Start</button>
+  </body>
+</html>
