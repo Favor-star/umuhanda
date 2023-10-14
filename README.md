@@ -1,1 +1,3 @@
 # umuhanda
+
+Amategeko y'umuhanda

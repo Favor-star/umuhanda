@@ -105,3 +105,21 @@ document.addEventListener("keydown", (e) => {
     atStart();
   }
 });
+function handleSubmission(list, selectedOption) {
+  const correctAnswers = [];
+
+  for (let i = 0; i < list.length; i++) {
+    correctAnswers.push({ id: list[i].id, correct: list[i].correct });
+  }
+
+  // Use some method to check if there is at least one match
+  const isCorrect = correctAnswers.some((obj) => {
+    return selectedOption.some((selectedObj) => {
+      return (
+        obj.id === selectedObj.qIndex + 1 && obj.correct === selectedObj.answer
+      );
+    });
+  });
+
+  return isCorrect;
+}
