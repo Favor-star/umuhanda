@@ -129,12 +129,13 @@ body {
 .start {
   padding: 10px 20px;
   font-size: 1.3rem;
+  font-weight: 600;
   background-color: #fff;
   color: #0a69ed;
   border-radius: 5px;
   outline: none;
   border: none;
-  font-weight: 600;
+
   display: block;
   position: absolute;
   top: 50%;
@@ -149,4 +150,8 @@ body {
   transform: scale(0);
   /* display: none; */
   transition: all 1s ease-in-out;
+}
+.marks-shown {
+  text-align: center;
+  background-color: #00aa6c;
 }

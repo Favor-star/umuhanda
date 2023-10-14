@@ -132,11 +132,13 @@ function handleCorrectAnswer(list, selectedOption) {
   }
   question.innerHTML = "Marks";
   let p = document.createElement("p");
-  p.setAttribute("class", 'choices');
+  p.setAttribute("class", "choices");
   p.innerHTML = marks;
+  p.classList.add("marks-shown")
   optionsDiv.innerHTML = "";
   optionsDiv.appendChild(p);
   nextBtn.style.display = "none";
-  qCount.innerHTML= "Thank you!"
+  prevBtn.style.display = "none";
+  qCount.innerHTML = "Thank you!";
   return marks;
 }
