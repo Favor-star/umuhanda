@@ -6,17 +6,31 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --mainColor:#0a69ed;
+  --white:#fff;
+  --secondColor: #00aa6c;
+  --choicesHover: rgb(112, 128, 144, 0.2);
+  --choicesBorder: slategray;
+}
+.dark-mode{
+  --mainColor:#000;
+  --white:#8D99AE;
+  --secondColor: #00aa6c;
+  --choicesHover: #fff;
+  --choicesBorder: #fff;
+}
 body {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #0a69ed;
+  background-color: var(--mainColor);
   position: relative;
 }
 .container {
-  background-color: #fff;
+  background-color: var(--white);
   min-height: 80%;
   width: 750px;
   border-radius: 10px;
@@ -39,7 +53,7 @@ body {
   width: 100%;
   align-items: center;
   padding: 10px;
-  border-bottom: 2px solid slategray;
+  border-bottom: 2px solid var(--choicesBorder);
   font-size: 1.3rem;
 }
 .q-body {
@@ -51,8 +65,8 @@ body {
   margin: 30px;
 }
 .q-image {
-  background-color: #fff;
-  border: 1px solid #00aa6c;
+  background-color: var(--white);
+  border: 1px solid var(--secondColor);
   border-radius: 5px;
   box-shadow: 4px 4px 20px 10px rgba(0, 0, 0, 0.137);
 }
@@ -80,13 +94,13 @@ body {
 .choices {
   width: 100%;
   font-size: 1.3rem;
-  border: 1px solid slategray;
+  border: 1px solid var(--choicesBorder);
   border-radius: 4px;
   padding: 5px 10px;
   min-height: 40px;
 }
 .choices:hover {
-  background-color: rgb(112, 128, 144, 0.2);
+  background-color: var(--choicesHover);
   cursor: pointer;
   user-select: none;
 }
@@ -102,7 +116,7 @@ body {
   padding: 10px 15px;
   font-size: 1.3rem;
   color: #fff;
-  background-color: #0a69ed;
+  background-color: var(--mainColor) ;
   border-radius: 5px;
   outline: none;
   border: none;
@@ -113,7 +127,7 @@ body {
   box-shadow: 2px 2px 10px 5px rgb(0, 0, 0, 0.4);
 }
 .clickedDiv {
-  border: 1px solid #00aa6c;
+  border: 1px solid var(--secondColor);
   background: #00aa6c40;
 }
 .clickedDiv:hover {
@@ -130,8 +144,8 @@ body {
   padding: 10px 20px;
   font-size: 1.3rem;
   font-weight: 600;
-  background-color: #fff;
-  color: #0a69ed;
+  background-color: var(--white);
+  color: var(--mainColor);
   border-radius: 5px;
   outline: none;
   border: none;
@@ -153,5 +167,5 @@ body {
 }
 .marks-shown {
   text-align: center;
-  background-color: #00aa6c;
+  background-color: var(--secondColor);
 }

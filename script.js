@@ -11,3 +11,4 @@ navButton.addEventListener("click", () => {
 start.addEventListener("click", () => {
   navigationbar.style.display = "none";
 });
+

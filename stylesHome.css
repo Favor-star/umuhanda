@@ -12,7 +12,6 @@
   align-items: flex-start;
   gap: 30px;
   background-color: #fff;
-  color: #6ca5f4;
   padding: 8px 10px;
   border-radius: 10px;
 
@@ -25,13 +24,13 @@
   /* transition: border-radius 300ms ease-in; */
 }
 .material-icons {
-  color: #0a69ed;
+  color: var(--mainColor);
   font-size: 24px;
   font-weight: 600;
 }
 .material-symbols-outlined {
   font-weight: 500;
-  color: #0a69ed;
+  color: var(--mainColor)
 }
 .nav-elements {
   display: flex;
@@ -42,8 +41,8 @@
 .nav-texts {
   font-size: 1.1rem;
   font-weight: 600;
-  color: white;
-  color: #0a69ed;
+  color: var(--whiteColor);
+  color: var(--mainColor);
   display: none;
 }
 .navigation:hover .nav-texts {

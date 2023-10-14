@@ -16,9 +16,14 @@ const minutesDiv = document.querySelector(".minutes");
 const imageDiv = document.querySelector(".q-image");
 const container = document.querySelector(".container");
 const start = document.querySelector(".start");
+const body = document.querySelector("body");
+const toggleDark = document.querySelector(".toggle-mode");
 let selectedOption = [];
 let selectedQuestionIndex = [];
 
+toggleDark.addEventListener("click", () => {
+  body.classList.toggle("dark-mode")
+})
 getQuestion().then((list) => {
   let listLength = list.length;
   let index = 0;
@@ -29,7 +34,7 @@ getQuestion().then((list) => {
       : prevBtn.removeAttribute("class", "prev-btn");
     prevBtn.classList.add("progress-btn");
     nextBtn.style.backgroundColor =
-      index == listLength - 1 ? "#ff0000" : "#0a69ed";
+      index == listLength - 1 ? "#00aa6c" : "var(--mainColor)";
     nextBtn.innerHTML = index == listLength - 1 ? "Submit" : "Next";
     qNumber.innerHTML = index + 1;
     question.innerHTML = list[index].question;
@@ -85,6 +90,7 @@ getQuestion().then((list) => {
     index = index + 1;
     if (index > listLength - 1) {
       handleCorrectAnswer(list, selectedOption);
+
       return;
     }
     render(index);
@@ -134,11 +140,31 @@ function handleCorrectAnswer(list, selectedOption) {
   let p = document.createElement("p");
   p.setAttribute("class", "choices");
   p.innerHTML = marks;
-  p.classList.add("marks-shown")
+  p.classList.add("marks-shown");
   optionsDiv.innerHTML = "";
   optionsDiv.appendChild(p);
-  nextBtn.style.display = "none";
+  // nextBtn.style.display = "none";
+  nextBtn.innerHTML = "View Answers";
+  nextBtn.addEventListener("click", () => {
+    console.log("Clicked");
+    saveAnswers(list, appendIndex);
+  });
   prevBtn.style.display = "none";
   qCount.innerHTML = "Thank you!";
+
   return marks;
+}
+
+//FUNCTION TO HANDLE THE AFTER FINISH
+let selection = [];
+
+let appendIndex = 0;
+function saveAnswers(list, index) {
+  container.innerHTML = "";
+  setTimeout(() => {
+    let q = document.createElement("p");
+    q.innerHTML = list[index].question;
+    container.appendChild(q);
+    console.log(list[index].question);
+  }, 500);
 }
