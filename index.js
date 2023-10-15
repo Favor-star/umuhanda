@@ -5,14 +5,14 @@ async function getQuestion() {
 }
 
 //declarations
-const question = document.querySelector(".question");
-const optionsDiv = document.querySelector(".options");
-const prevBtn = document.querySelectorAll(".progress-btn")[0];
-const nextBtn = document.querySelectorAll(".progress-btn")[1];
-const qNumber = document.querySelector("[q-number]");
-const qCount = document.querySelector(".q-count");
-const secondsDiv = document.querySelector(".seconds");
-const minutesDiv = document.querySelector(".minutes");
+const question = document.querySelector(".question"),
+  optionsDiv = document.querySelector(".options"),
+  prevBtn = document.querySelectorAll(".progress-btn")[0],
+  nextBtn = document.querySelectorAll(".progress-btn")[1],
+  qNumber = document.querySelector("[q-number]"),
+  qCount = document.querySelector(".q-count"),
+  secondsDiv = document.querySelector(".seconds"),
+  minutesDiv = document.querySelector(".minutes");
 const imageDiv = document.querySelector(".q-image");
 const container = document.querySelector(".container");
 const start = document.querySelector(".start");
@@ -22,8 +22,8 @@ let selectedOption = [];
 let selectedQuestionIndex = [];
 
 toggleDark.addEventListener("click", () => {
-  body.classList.toggle("dark-mode")
-})
+  body.classList.toggle("dark-mode");
+});
 getQuestion().then((list) => {
   let listLength = list.length;
   let index = 0;
@@ -161,10 +161,33 @@ let selection = [];
 let appendIndex = 0;
 function saveAnswers(list, index) {
   container.innerHTML = "";
-  setTimeout(() => {
-    let q = document.createElement("p");
+
+  let q = document.createElement("p");
+  let span1 = document.createElement("span");
+  let span2 = document.createElement("span");
+  span1.setAttribute("class", "material-symbols-outlined");
+  span2.setAttribute("class", "material-symbols-outlined");
+  span1.innerHTML = "keyboard_double_arrow_up";
+  span2.innerHTML = "keyboard_double_arrow_down";
+  span2.onclick = () => {
+    container.innerHTML = "";
+    index++;
+    append();
+  };
+  function append() {
     q.innerHTML = list[index].question;
+    container.classList.add("answers-container");
+
+    container.appendChild(span1);
     container.appendChild(q);
+    list[index].options.forEach((option) => {
+      let p = document.createElement("p");
+      p.innerHTML = option;
+      p.classList.add("answers");
+      container.appendChild(p);
+    });
+    container.appendChild(span2);
     console.log(list[index].question);
-  }, 500);
+  }
+  append(list, index);
 }

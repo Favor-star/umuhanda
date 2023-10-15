@@ -14,7 +14,6 @@
   background-color: #fff;
   padding: 8px 10px;
   border-radius: 10px;
-
 }
 
 .bar-elements:hover {
@@ -30,7 +29,8 @@
 }
 .material-symbols-outlined {
   font-weight: 500;
-  color: var(--mainColor)
+  color: var(--mainColor);
+  cursor:pointer;
 }
 .nav-elements {
   display: flex;
@@ -47,4 +47,12 @@
 }
 .navigation:hover .nav-texts {
   display: block;
+}
+.answers {
+  width: 100%;
+  font-size: 1.3rem;
+  border: 1px solid var(--choicesBorder);
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px auto;
 }
