@@ -1,7 +1,10 @@
 async function getQuestion() {
   const data = await fetch("./questions.json");
   const response = await data.json();
-  return response.qList1;
+  const responseArray = Object.entries(response);
+  const q = `qList${Math.floor(Math.random() * responseArray.length + 1)}`;
+  console.log(q);
+  return response[q];
 }
 
 //declarations
@@ -57,6 +60,17 @@ getQuestion().then((list) => {
       }
       optionsDiv.appendChild(p);
     });
+    if (list[index].qImgLink === "N/A") {
+      imageDiv.style.display = "none";
+    } else {
+      imageDiv.innerHTML = "";
+      let image = document.createElement("img");
+      image.src = `${list[index].qImgLink}`;
+      image.alt = `image-id-${list[index].id}`;
+      image.classList.add("image-shown");
+      imageDiv.appendChild(image);
+      imageDiv.style.display = "block";
+    }
     let pElements = document.querySelectorAll("p");
     pElements.forEach((elem) => {
       const chosenAnswer = elem.innerHTML;
@@ -113,6 +127,7 @@ document.addEventListener("keydown", (e) => {
     atStart();
   }
 });
+
 function handleCorrectAnswer(list, selectedOption) {
   const correctChoices = [];
   let marks = 0;
@@ -168,18 +183,29 @@ function saveAnswers(list, index) {
   span1.setAttribute("class", "material-symbols-outlined");
   span2.setAttribute("class", "material-symbols-outlined");
   span1.innerHTML = "keyboard_double_arrow_up";
+  span1.setAttribute("title", "Click to show Previous Question");
   span2.innerHTML = "keyboard_double_arrow_down";
+  span2.setAttribute("title", "Click to show Next Question");
+  span1.onclick = () => {
+    container.innerHTML = "";
+    index--;
+    append();
+  };
+
   span2.onclick = () => {
     container.innerHTML = "";
     index++;
     append();
   };
+
   function append() {
     q.innerHTML = list[index].question;
+    q.classList.add("question");
     container.classList.add("answers-container");
 
     container.appendChild(span1);
     container.appendChild(q);
+
     list[index].options.forEach((option) => {
       let p = document.createElement("p");
       p.innerHTML = option;
@@ -187,7 +213,32 @@ function saveAnswers(list, index) {
       container.appendChild(p);
     });
     container.appendChild(span2);
-    console.log(list[index].question);
+    const object = selectedOption[index];
+    const selected = list[index].options.filter((elem) => {
+      if (object == undefined) {
+        console.log("No selection were made!");
+        return;
+      }
+      return elem === selectedOption[index].answer;
+    });
+    const pElem = document.querySelectorAll(".answers");
+    console.log(pElem);
+    pElem.forEach((elem) => {
+      elem.innerHTML === list[index].correct &&
+        elem.classList.add("clickedDiv");
+      elem.innerHTML == selected[0] &&
+        !elem.classList.contains("clickedDiv") &&
+        elem.classList.add("notTrue");
+      // if (elem.innerHTML === selected[0]) {
+      //   if (elem.innerHTML === list[index].correct) {
+      //     elem.classList.add("clickedDiv");
+      //   }
+      //   elem.classList.contains("clickedDiv")
+      //     ? elem.classList.add("clickedDiv")
+      //     : elem.classList.add("notTrue");
+      // }
+    });
+    console.log(selected);
   }
-  append(list, index);
+  append();
 }
