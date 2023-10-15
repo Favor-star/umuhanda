@@ -21,16 +21,29 @@ const container = document.querySelector(".container");
 const start = document.querySelector(".start");
 const body = document.querySelector("body");
 const toggleDark = document.querySelector(".toggle-mode");
+const refresh = document.querySelector(".refresh");
 let selectedOption = [];
 let selectedQuestionIndex = [];
+let appendIndex = 0;
 
-toggleDark.addEventListener("click", () => {
+//TOGGLE THE BACKGROUND MODE
+const toggleColorMode = () => {
   body.classList.toggle("dark-mode");
+};
+toggleDark.addEventListener("click", toggleColorMode);
+// Check system color scheme preference and set initial mode
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  toggleColorMode(); // Set dark mode if system prefers it
+}
+//REFRESH THE WEBPAGE
+refresh.addEventListener("click", () => {
+  location.reload();
 });
 getQuestion().then((list) => {
   let listLength = list.length;
   let index = 0;
 
+  //SHOWING QUESTION TO THE USER
   const render = (index) => {
     index == 0
       ? prevBtn.setAttribute("class", "prev-btn ")
@@ -60,6 +73,7 @@ getQuestion().then((list) => {
       }
       optionsDiv.appendChild(p);
     });
+    //HANDLING THE DISPLAY OF IMAGE. IF THE QUESTION CONTAINS IMAGES, SHOW IT; ELSE THE IMAGE DIV IS NOT DISPLAYED
     if (list[index].qImgLink === "N/A") {
       imageDiv.style.display = "none";
     } else {
@@ -103,7 +117,7 @@ getQuestion().then((list) => {
   nextBtn.addEventListener("click", () => {
     index = index + 1;
     if (index > listLength - 1) {
-      handleCorrectAnswer(list, selectedOption);
+      handleMarks(list, selectedOption);
 
       return;
     }
@@ -118,6 +132,7 @@ getQuestion().then((list) => {
 
 start.addEventListener("click", atStart);
 
+//FUNCTION TO HANDLE THE INITIAL RENDERING OF PAGE ON RELOAD
 function atStart() {
   start.style.display = "none";
   container.classList.add("container-shown");
@@ -128,16 +143,20 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-function handleCorrectAnswer(list, selectedOption) {
+//FUNCTION TO CALCULATE THE TOTAL MARKS OBTAINED
+function handleMarks(list, selectedOption) {
   const correctChoices = [];
   let marks = 0;
   for (let i = 0; i < list.length; i++) {
+    // extract the correct choices from the provided lists and stores them in correctChoices array
     correctChoices.push(list[i].correct);
   }
 
   for (let j = 0; j < correctChoices.length; j++) {
+    // loop over all correctChoicesArray
     let isAnswerFound = false;
     for (let i = 0; i < selectedOption.length; i++) {
+      //looping througn the selected options and compares the correct and selescted
       if (
         selectedOption[i].answer == correctChoices[j] &&
         j == selectedOption[i].qIndex
@@ -145,12 +164,15 @@ function handleCorrectAnswer(list, selectedOption) {
         marks += 1;
         isAnswerFound = true;
         break;
+        //checks the question number and its answer and compare them to the correct choices. if found to match, add a mark, and leave the loop without further due.
       }
     }
     if (isAnswerFound) {
+      //if the answer was found in this loop, continue to the next iteration.
       continue;
     }
   }
+  //SHOWIMG MARKS, UPDATING BUTTONS, CALLING THE FUNCTION WHICH HANDLE THE REVIEWING.
   question.innerHTML = "Marks";
   let p = document.createElement("p");
   p.setAttribute("class", "choices");
@@ -170,23 +192,21 @@ function handleCorrectAnswer(list, selectedOption) {
   return marks;
 }
 
-//FUNCTION TO HANDLE THE AFTER FINISH
-let selection = [];
-
-let appendIndex = 0;
+//FUNCTION WHICH ALLOW THE USER TO BE ABLE TO SEE HIS CHOICES AND REVIEW  THE CORRECT ONES
 function saveAnswers(list, index) {
   container.innerHTML = "";
 
   let q = document.createElement("p");
   let span1 = document.createElement("span");
   let span2 = document.createElement("span");
-  span1.setAttribute("class", "material-symbols-outlined");
-  span2.setAttribute("class", "material-symbols-outlined");
-  span1.innerHTML = "keyboard_double_arrow_up";
-  span1.setAttribute("title", "Click to show Previous Question");
-  span2.innerHTML = "keyboard_double_arrow_down";
+  span1.setAttribute("class", "material-symbols-outlined reviewBtn"); //create the up button
+  span2.setAttribute("class", "material-symbols-outlined reviewBtn");
+  span1.innerHTML = "keyboard_double_arrow_up"; //set the inner text for up button
+  span2.innerHTML = "keyboard_double_arrow_down"; //set the inner text for down button
+  span1.setAttribute("title", "Click to show Previous Question"); //set the title so that when the mousse stays on the element the user will be able to see the usage
   span2.setAttribute("title", "Click to show Next Question");
   span1.onclick = () => {
+    //handle the clicking of the up button
     container.innerHTML = "";
     index--;
     append();
@@ -199,6 +219,7 @@ function saveAnswers(list, index) {
   };
 
   function append() {
+    //this is responsible for showing the the question
     q.innerHTML = list[index].question;
     q.classList.add("question");
     container.classList.add("answers-container");
@@ -224,21 +245,15 @@ function saveAnswers(list, index) {
     const pElem = document.querySelectorAll(".answers");
     console.log(pElem);
     pElem.forEach((elem) => {
+      //it checks whether the choices is equal to the answer, if so, it add the  highlight showing that it correct
       elem.innerHTML === list[index].correct &&
         elem.classList.add("clickedDiv");
+
+      //checks if the choices was made, but if it is differrent from the real answer and then it adds the red color
       elem.innerHTML == selected[0] &&
         !elem.classList.contains("clickedDiv") &&
         elem.classList.add("notTrue");
-      // if (elem.innerHTML === selected[0]) {
-      //   if (elem.innerHTML === list[index].correct) {
-      //     elem.classList.add("clickedDiv");
-      //   }
-      //   elem.classList.contains("clickedDiv")
-      //     ? elem.classList.add("clickedDiv")
-      //     : elem.classList.add("notTrue");
-      // }
     });
-    console.log(selected);
   }
-  append();
+  append(); //call the function at first;
 }

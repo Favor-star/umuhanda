@@ -48,6 +48,28 @@
 .navigation:hover .nav-texts {
   display: block;
 }
+.reviewBtn{
+   width: 100%;
+  text-align: center;
+  border: 1px dashed var(--choicesBorder);
+
+  border-radius: 5px;
+  font-size: 36px;
+  font-weight: 600;
+  user-select: none;
+}
+.reviewBtn:hover{
+  background-color: var(--choicesHover);
+}
+.reviewBtn:first-of-type{
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+.reviewBtn:last-of-type{
+  margin-top: 20px;
+  margin-bottom: -5px;
+
+}
 .answers {
   width: 100%;
   font-size: 1.3rem;
