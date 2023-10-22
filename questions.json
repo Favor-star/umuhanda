@@ -824,7 +824,7 @@
     {
       "id": "12",
       "question": "Ndashaka guparika ikinyabiga iburyo kunzira y’abanyamaguru",
-      "qImgLink": "images/qList4-12.jpg",
+      "qImgLink": "images/qList4-12.png",
       "options": [
         "biremewe munsi yicyi cyapa",
         "biremewe imbere y’icyi cyapa",
@@ -848,7 +848,7 @@
     {
       "id": "14",
       "question": "Ngomba :",
-      "qImgLink": "",
+      "qImgLink": "images/qList4-14.png",
       "options": [
         "guhagarara igihe gito kuri icyi cyapa cy’umuhanda",
         "guhagarara ngatanga inzira kuri metero 100 ntaragera kuri icyi cyapa",
@@ -896,7 +896,7 @@
     {
       "id": "18",
       "question": "Ibi byapa byo mu muhanda birambuza kunyuranaho ibumoso ?",
-      "qImgLink": "N/A",
+      "qImgLink": "images/qList4-18.png",
       "options": [
         "yego",
         "yego, iyo ufite umuvuduo wa 90km/h",
