@@ -203,7 +203,7 @@ function saveAnswers(list, index) {
   span2.setAttribute("class", "material-symbols-outlined reviewBtn");
   span1.innerHTML = "keyboard_double_arrow_up"; //set the inner text for up button
   span2.innerHTML = "keyboard_double_arrow_down"; //set the inner text for down button
-  span1.setAttribute("title", "Click to show Previous Question"); //set the title so that when the mousse stays on the element the user will be able to see the usage
+  span1.setAttribute("title", "Click to show Previous Question"); //set the title so that when the mouse stays on the element the user will be able to see the usage
   span2.setAttribute("title", "Click to show Next Question");
   span1.onclick = () => {
     //handle the clicking of the up button
@@ -229,7 +229,7 @@ function saveAnswers(list, index) {
 
     list[index].options.forEach((option) => {
       let p = document.createElement("p");
-      p.innerHTML = option;
+      p.innerText = option;
       p.classList.add("answers");
       container.appendChild(p);
     });
