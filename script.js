@@ -11,7 +11,12 @@ const navContainer = document.querySelector("[nav-container");
 //   navigationbar.style.display = "none";
 // });
 
-
 $(document).ready(() => {
-  console.log("the CDN is working");
+  let isDown = false;
+  $(".menu-icon").click(() => {
+    $(".elem").animate({ width: "toggle" });
+  });
+  $(".start").click(() => { 
+    $(".bar-elements").hide();
+  });
 });

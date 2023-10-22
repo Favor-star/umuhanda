@@ -84,7 +84,7 @@ getQuestion().then((list) => {
       image.classList.add("image-shown");
       imageDiv.appendChild(image);
       imageDiv.style.display = "block";
-    }
+    } 
     let pElements = document.querySelectorAll("p");
     pElements.forEach((elem) => {
       const chosenAnswer = elem.innerHTML;
@@ -151,7 +151,7 @@ function handleMarks(list, selectedOption) {
     // extract the correct choices from the provided lists and stores them in correctChoices array
     correctChoices.push(list[i].correct);
   }
-
+ 
   for (let j = 0; j < correctChoices.length; j++) {
     // loop over all correctChoicesArray
     let isAnswerFound = false;

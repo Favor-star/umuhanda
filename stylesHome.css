@@ -1,12 +1,17 @@
+.nav-container {
+  display: flex;
+}
 .navigation {
   position: absolute;
   top: 30px;
   left: 15px;
   user-select: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .bar-elements {
-  width: 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,14 +19,14 @@
   background-color: #fff;
   padding: 8px 10px;
   border-radius: 10px;
+  width: 150px;
 }
-
-.bar-elements:hover {
+/* .bar-elements {
   width: 150px;
   box-shadow: 2px 2px 6px #00000088;
   transition: width 300ms ease-in;
-  /* transition: border-radius 300ms ease-in; */
-}
+  transition: border-radius 300ms ease-in;
+} */
 .material-icons {
   color: var(--mainColor);
   font-size: 24px;
@@ -30,7 +35,7 @@
 .material-symbols-outlined {
   font-weight: 500;
   color: var(--mainColor);
-  cursor:pointer;
+  cursor: pointer;
 }
 .nav-elements {
   display: flex;
@@ -43,33 +48,29 @@
   font-weight: 600;
   color: var(--whiteColor);
   color: var(--mainColor);
-  display: none;
 }
-.navigation:hover .nav-texts {
-  display: block;
-}
-.reviewBtn{
-   width: 100%;
+
+.reviewBtn {
+  width: 100%;
   text-align: center;
   border: 1px dashed var(--choicesBorder);
 
   border-radius: 5px;
   font-size: 36px;
-  
+
   font-weight: 600;
   user-select: none;
 }
-.reviewBtn:hover{
+.reviewBtn:hover {
   background-color: var(--choicesHover);
 }
-.reviewBtn:first-of-type{
+.reviewBtn:first-of-type {
   margin-top: -5px;
   margin-bottom: 20px;
 }
-.reviewBtn:last-of-type{
+.reviewBtn:last-of-type {
   margin-top: 20px;
   margin-bottom: -5px;
-
 }
 .answers {
   width: 100%;
@@ -79,7 +80,7 @@
   padding: 5px 10px;
   margin: 5px auto;
 }
-.notTrue{
+.notTrue {
   border: 1px solid #ff0000;
   background: #ff000040;
 }
