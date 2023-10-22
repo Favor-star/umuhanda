@@ -706,143 +706,228 @@
   "qList4": [
     {
       "id": "1",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Iki kimenyetso kiri mu muhanda kivuze iki ?",
+      "qImgLink": "images/qList4-1.jpg",
+      "options": [
+        "Biremewe kunyuranaho",
+        "Umuyobozi abujijwe kukirenga",
+        "Wegereye icyapa cyo  guhagarara umwanya muto",
+        "Umuhanda ufunganye"
+      ],
+      "correct": "Umuyobozi abujijwe kukirenga"
     },
     {
       "id": "2",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Iki kimenyetso kiri mu muhanda kivuze iki ?",
+      "qImgLink": "images/qList4-2.png",
+      "options": [
+        "Umuyobozi abujijwe kurenga umurongo wera ucagaguye  cyeretse mugihe bitateza icyago",
+        "Birabujijwe kunyuranaho",
+        "Biremewe kunyuranaho ariko nturenge umurongo wera ucagaguye",
+        "Birabujijwe gusubira inyuma"
+      ],
+      "correct": "Umuyobozi abujijwe kurenga umurongo wera ucagaguye  cyeretse mugihe bitateza icyago"
     },
     {
       "id": "3",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Mu gihe  utwaye ikinyabiziga uva kuri A ugana kuri B,  Iki kimenyetso kiri mu muhanda kivuze iki ?",
+      "qImgLink": "images/qList4-3.png",
+      "options": [
+        "Umuyobozi ashobora kurenga umurongo wera udacagaguye mugihe  cyo guhindukira gusa",
+        "Umuyobozi w’ikinyabiziga abujijwe kunyuranaho, uretse gusa abayobozi b’ibinyamitende nibo bashobora kurenga umurongo wera udacagaguye",
+        "Umuyobozi w’ikinyabiziga abujijwe kunyuranaho arenze umurongo wera udacagaguye",
+        "Umuyobozi w’ikinyabiziga ashobora kunyuranaho mu gihe bitateza icyago"
+      ],
+      "correct": "Umuyobozi w’ikinyabiziga ashobora kunyuranaho mu gihe bitateza icyago"
     },
     {
       "id": "4",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Mu gihe  utwaye ikinyabiziga uva kuri A ugana kuri B,  Iki kimenyetso kiri mu muhanda kivuze iki ?",
+      "qImgLink": "images/qList4-4.jpg",
+      "options": [
+        "Umuyobozi w’ikinyabiziga ashobora kunyuranaho arenze umurongo wera udacagaguye",
+        "Umuyobozi w’ikinyabiziga abujijwe kunyuranaho arenze imirongo yera",
+        "Umuyobozi w’ikinyabiziga yemerewe kunyuranaho",
+        "Abayobozi b’ibinyamitende gusa bemerewe kunyuranaho barenze umurongo wera udacagaguye"
+      ],
+      "correct": "Umuyobozi w’ikinyabiziga abujijwe kunyuranaho arenze imirongo yera"
     },
     {
       "id": "5",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Ni ikihe icyapa gisobanura umuhanda w'icyerekezo kimwe:",
+      "qImgLink": "images/qList4-5.jpg",
+      "options": ["Icyapa D1a", "Icyapa E13a", "Icyapa C19", "Icyapa C1"],
+      "correct": "Icyapa E13a"
     },
     {
       "id": "6",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Muri ibi byapa bikurikira ni ikihe cyerekana ko umuyobozi ukibonye yemerewe gutambuka mbere y'abaturutse aho agana mu nzira ifunganye:",
+      "qImgLink": "images/qList4-6.jpg",
+      "options": ["Icyapa B6", "Icyapa A19", "Icyapa B3", "Icyapa A22a"],
+      "correct": "Icyapa B6"
     },
     {
       "id": "7",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Iki cyapa gisobanura iki ?",
+      "qImgLink": "images/qList4-7.png",
+      "options": ["Tanga inzira", "Icyago", "Icyerekezo kimwe", "Ntihanyurwa"],
+      "correct": "Tanga inzira"
     },
     {
       "id": "8",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Iki cyapa gisobanura iki ?",
+      "qImgLink": "images/qList4-8.png",
+      "options": [
+        "Uburemere ntarengwa bwemewe bwa toni 3",
+        "Ntihanyurwa n’ibinyabiziga bigenewe gutwara ibicuruzwa",
+        "Ntihanyurwa n’ibinyabiziga bifite imitambiko itatu",
+        "Hanyurwa n’ibinyabiziga  bifite imitambiko itatu gusa"
+      ],
+      "correct": "Ntihanyurwa n’ibinyabiziga bigenewe gutwara ibicuruzwa"
     },
     {
       "id": "9",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Iki cyapa gisobanura iki ?",
+      "qImgLink": "images/qList4-9.png",
+      "options": [
+        "Inkomane banyuramo bazengurutse",
+        "Biremewe guhindukira",
+        "Inzira y’icyerekezo kimwe imbere",
+        "Birabujijwe guhindukira"
+      ],
+      "correct": "Inkomane banyuramo bazengurutse"
     },
     {
       "id": "10",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Umuyobozi wikinyabiziga aritegura kunyuraho ibumoso :",
+      "qImgLink": "images/qList4-10.png",
+      "options": [
+        "nshobora kumunyuraho nyuze iburyo",
+        "sinshobora kumunyura",
+        "nshobora kumunyura nciye ibumoso  ariko mbonye ko mfite umwanya uhagije",
+        "Ntagisubizo cy’ukuri kirimo"
+      ],
+      "correct": "nshobora kumunyura nciye ibumoso  ariko mbonye ko mfite umwanya uhagije"
     },
     {
       "id": "11",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Uhereye kuri ibi byapa habujijwe :",
+      "qImgLink": "images/qList4-11.png",
+      "options": [
+        "Kunyuranaho kubinyabiziga bikururwa nibinyabiziga birengeje imitende ibiri ibumoso no kugendera kumuvuduko urengeje 70 km/h",
+        "Kunyuranaho kubinyabiziga bikururwa cyangwa ibinyabiziga birengeje imitende ibiri ibumoso",
+        "kugendera hejuru ya 70 km/h",
+        "ntagisubizo cy’ukuri"
+      ],
+      "correct": "Kunyuranaho kubinyabiziga bikururwa nibinyabiziga birengeje imitende ibiri ibumoso no kugendera kumuvuduko urengeje 70 km/h"
     },
     {
       "id": "12",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Ndashaka guparika ikinyabiga iburyo kunzira y’abanyamaguru",
+      "qImgLink": "images/qList4-12.jpg",
+      "options": [
+        "biremewe munsi yicyi cyapa",
+        "biremewe imbere y’icyi cyapa",
+        "birabujijwe imbere n’inyuma yicyi cyapa",
+        "nta gisubizo cy’ukuri kirimo"
+      ],
+      "correct": "biremewe munsi yicyi cyapa"
     },
     {
       "id": "13",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Iki cyapa gisobanura iki ?",
+      "qImgLink": "images/qList4-13.jpg",
+      "options": [
+        "Guhagarara, aho abanyeshuri bambukira",
+        "Hagarara akanya gato",
+        "Ibindi binyabiziga bigomba kuguha inzira",
+        "Gutanga umwanya ku bindi binyabiziga i buryo bwawe"
+      ],
+      "correct": "Hagarara akanya gato"
     },
     {
       "id": "14",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Ngomba :",
+      "qImgLink": "",
+      "options": [
+        "guhagarara igihe gito kuri icyi cyapa cy’umuhanda",
+        "guhagarara ngatanga inzira kuri metero 100 ntaragera kuri icyi cyapa",
+        "gutanga inzira nkanahagarara  iyo ari ngombwa muri m100 ntaragera kuri icyi cyapa",
+        "ntagisubizo cy’ukuri"
+      ],
+      "correct": "guhagarara ngatanga inzira kuri metero 100 ntaragera kuri icyi cyapa"
     },
     {
       "id": "15",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Ndashaka kugata ibumoso. Imodoka y’icyatsi yaje irahagarara. Ninde ufite uburenganzira bwo gutambuka mbere?",
+      "qImgLink": "images/qList4-15.png",
+      "options": [
+        "mfite uburenganzira bwo gutambuka mbere",
+        "imodoka y’icyatsi ifite uburenganzira bwo gutambuka mbere",
+        "twembi ntaburenganzira bwo gutambuka mbere gusa tugomba gutambukana ubwitonzi",
+        "ntagisubizo nakimwe kirimo"
+      ],
+      "correct": "imodoka y’icyatsi ifite uburenganzira bwo gutambuka mbere"
     },
     {
       "id": "16",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Mfite uburenganzira bwo gutambuka muri iri sangano ?",
+      "qImgLink": "images/qList4-16.png",
+      "options": [
+        "yego, niba ukata ibumoso",
+        "Oya niba ukata iburyo",
+        "yego , bitewe n'aho ngana",
+        "ntagisubizo cy’ukuri kirimo"
+      ],
+      "correct": "yego , bitewe n'aho ngana"
     },
     {
       "id": "17",
-      "question": "",
-      "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "question": "Ndi kumuvuduko wa 20km/h. nshobora gukomeza muri iri sangano ry’umuhanda?",
+      "qImgLink": "images/qList4-17.png",
+      "options": [
+        "Oya",
+        "yego, nshobora gukata iburyo",
+        "yego, nshobora guta ibumoso cyangwa iburyo",
+        "yego, nshobora gukata ibumoso gusa"
+      ],
+      "correct": "Oya"
     },
     {
       "id": "18",
-      "question": "",
+      "question": "Ibi byapa byo mu muhanda birambuza kunyuranaho ibumoso ?",
       "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "options": [
+        "yego",
+        "yego, iyo ufite umuvuduo wa 90km/h",
+        "oya",
+        "ntagisubizo cy’ukuri"
+      ],
+      "correct": "yego"
     },
     {
       "id": "19",
-      "question": "",
+      "question": "Ibyapa biburira bibereyeho kumenyesha umugenzi:",
       "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "options": [
+        "ko hari icyago",
+        "icyago kidasobanuye ukundi",
+        "imiterere y’icyago gitunguranye",
+        "nta gisubizo cy’ukuri kirimo"
+      ],
+      "correct": "ko hari icyago"
     },
     {
       "id": "20",
-      "question": "",
+      "question": "Ibyapa by’inyongera bishobora kumenyesha.",
       "qImgLink": "N/A",
-      "options": [],
-      "correct": ""
+      "options": [
+        "ibitegetswe byihariye gusa",
+        "ubugerure cyangwa amarengamategeko rusange cyangwa ibibujijwe ndetse n’ibitegetswe byihariye",
+        "a na b ni ibisubizo by’ukuri",
+        "nta gisubizo cy’ukuri kirimo"
+      ],
+      "correct": "ubugerure cyangwa amarengamategeko rusange cyangwa ibibujijwe ndetse n’ibitegetswe byihariye"
     }
   ],
   "qList5": [
